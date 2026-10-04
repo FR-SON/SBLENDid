@@ -1,0 +1,10 @@
+# Overlay for the postgres+pgvector path: joins the network shared with docker/postgres-compose.yml.
+# One-time: docker network create ${BLEND_NET:-blend-net}
+services:
+  blend:
+    networks:
+      - blend-net
+networks:
+  blend-net:
+    external: true
+    name: ${BLEND_NET:-blend-net}

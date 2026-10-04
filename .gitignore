@@ -1,13 +1,21 @@
 # Custom
 groups
-config.ini
 vertica.ini
 vertica_example.ini
 postgres.ini
 logs/
 .idea/
+.DS_Store
 freqs_dict.pkl
 freqs_dict.csv
+*.parquet
+
+/datasets/
+
+docker/pg-data/
+/runs/
+
+_reference/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -19,8 +27,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-tests/
-data/
+
+/data/
 build/
 develop-eggs/
 dist/

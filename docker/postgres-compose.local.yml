@@ -1,0 +1,44 @@
+# Local Postgres/pgvector for a laptop: named volume, plain 5432, smaller worker/work_mem budget.
+services:
+  postgres:
+    image: timescale/timescaledb-ha:pg17
+    container_name: blend-pg
+    environment:
+      POSTGRES_USER: blend
+      POSTGRES_PASSWORD: blend
+      POSTGRES_DB: blend
+    ports:
+      - "5432:5432"
+    volumes:
+      - blend_pgdata:/home/postgres/pgdata/data
+      - ./pg-init:/docker-entrypoint-initdb.d:ro
+    # Parallel HNSW builds size /dev/shm from maintenance_work_mem; 1g fails.
+    shm_size: "${PG_SHM_SIZE:-4g}"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U blend -d blend"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    command:
+      - postgres
+      - -c
+      - jit=off
+      - -c
+      - max_parallel_workers_per_gather=${PG_MAX_PARALLEL_WORKERS_PER_GATHER:-4}
+      - -c
+      - max_parallel_workers=${PG_MAX_PARALLEL_WORKERS:-4}
+      - -c
+      - work_mem=${PG_WORK_MEM:-512MB}
+      - -c
+      - hash_mem_multiplier=${PG_HASH_MEM_MULTIPLIER:-2.0}
+      # Must hold the whole semantic_columns family (heap + hnsw + pkey).
+      - -c
+      - shared_buffers=${PG_SHARED_BUFFERS:-2GB}
+      - -c
+      - effective_cache_size=${PG_EFFECTIVE_CACHE_SIZE:-4GB}
+      # The image's own config preloads only timescaledb,pg_textsearch; vchord must be added.
+      - -c
+      - shared_preload_libraries=timescaledb,pg_textsearch,vchord
+volumes:
+  blend_pgdata:
+    name: ${PG_VOLUME:-blend_pgdata}

@@ -1,0 +1,18 @@
+{
+  "train_dataset": "opendata",
+  "left": [
+    "statistic"
+  ],
+  "right": [
+    "paragraph",
+    "word",
+    "number",
+    "pattern"
+  ],
+  "num_heads": 2,
+  "hidden_size": 128,
+  "batch_size": 64,
+  "lr": 0.0005,
+  "epochs": 10,
+  "num_workers": 4
+}

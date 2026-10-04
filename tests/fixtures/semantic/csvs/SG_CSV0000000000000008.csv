@@ -1,0 +1,233 @@
+year,school,course_type,course_name,gender,count
+2016,School of Applied Science,Full-Time,Diploma in Applied Food Science & Nutrition,Female,242
+2016,School of Applied Science,Full-Time,Diploma in Applied Food Science & Nutrition,Male,58
+2016,School of Applied Science,Full-Time,Diploma in Baking & Culinary Science,Female,60
+2016,School of Applied Science,Full-Time,Diploma in Baking & Culinary Science,Male,66
+2016,School of Applied Science,Full-Time,Diploma in Biomedical Science,Female,94
+2016,School of Applied Science,Full-Time,Diploma in Biomedical Science,Male,56
+2016,School of Applied Science,Full-Time,Diploma in Biotechnology,Female,163
+2016,School of Applied Science,Full-Time,Diploma in Biotechnology,Male,113
+2016,School of Applied Science,Full-Time,Diploma in Chemical Engineering,Female,159
+2016,School of Applied Science,Full-Time,Diploma in Chemical Engineering,Male,292
+2016,School of Applied Science,Full-Time,Diploma in Consumer Science & Technology,Female,5
+2016,School of Applied Science,Full-Time,Diploma in Pharmaceutical Science,Female,183
+2016,School of Applied Science,Full-Time,Diploma in Pharmaceutical Science,Male,107
+2016,School of Applied Science,Full-Time,Diploma in Veterinary Technology,Female,112
+2016,School of Applied Science,Full-Time,Diploma in Veterinary Technology,Male,42
+2016,School of Business,Full-Time,Business/ Logistics & Operations Management/Marketing,Female,273
+2016,School of Business,Full-Time,Business/ Logistics & Operations Management/Marketing,Male,203
+2016,School of Business,Full-Time,Diploma in Accounting & Finance,Female,232
+2016,School of Business,Full-Time,Diploma in Accounting & Finance,Male,245
+2016,School of Business,Full-Time,Diploma in Business,Female,380
+2016,School of Business,Full-Time,Diploma in Business,Male,261
+2016,School of Business,Full-Time,Diploma in Business Information Technology,Female,180
+2016,School of Business,Full-Time,Diploma in Business Information Technology,Male,210
+2016,School of Business,Full-Time,Diploma in Communications & Media Management,Female,192
+2016,School of Business,Full-Time,Diploma in Communications & Media Management,Male,66
+2016,School of Business,Full-Time,Diploma in Culinary & Catering Management,Female,78
+2016,School of Business,Full-Time,Diploma in Culinary & Catering Management,Male,83
+2016,School of Business,Full-Time,Diploma in Hospitality & Tourism Management,Female,461
+2016,School of Business,Full-Time,Diploma in Hospitality & Tourism Management,Male,195
+2016,School of Business,Full-Time,Diploma in Law and Management,Female,218
+2016,School of Business,Full-Time,Diploma in Law and Management,Male,139
+2016,School of Business,Full-Time,Diploma in Leisure & Events Management,Female,227
+2016,School of Business,Full-Time,Diploma in Leisure & Events Management,Male,79
+2016,School of Business,Full-Time,Diploma in Leisure & Resort Management,Female,120
+2016,School of Business,Full-Time,Diploma in Leisure & Resort Management,Male,50
+2016,School of Business,Full-Time,Diploma in Logistics & Operations Management,Female,122
+2016,School of Business,Full-Time,Diploma in Logistics & Operations Management,Male,94
+2016,School of Business,Full-Time,Diploma in Marketing,Female,100
+2016,School of Business,Full-Time,Diploma in Marketing,Male,92
+2016,School of Business,Full-Time,Diploma in Retail Management,Female,197
+2016,School of Business,Full-Time,Diploma in Retail Management,Male,60
+2016,School of Design,Full-Time,Diploma in Apparel Design & Merchandising,Female,156
+2016,School of Design,Full-Time,Diploma in Apparel Design & Merchandising,Male,24
+2016,School of Design,Full-Time,Diploma in Communication Design,Female,261
+2016,School of Design,Full-Time,Diploma in Communication Design,Male,69
+2016,School of Design,Full-Time,Diploma in Digital Film & Television,Female,133
+2016,School of Design,Full-Time,Diploma in Digital Film & Television,Male,98
+2016,School of Design,Full-Time,Diploma in Environment Design,Female,78
+2016,School of Design,Full-Time,Diploma in Environment Design,Male,50
+2016,School of Design,Full-Time,Diploma in Interactive Media Design,Male,2
+2016,School of Design,Full-Time,Diploma in Interior Architecture & Design,Female,124
+2016,School of Design,Full-Time,Diploma in Interior Architecture & Design,Male,77
+2016,School of Design,Full-Time,Diploma in Product & Industrial Design,Female,67
+2016,School of Design,Full-Time,Diploma in Product & Industrial Design,Male,71
+2016,School of Design,Full-Time,Diploma in Retail & Hospitality Design,Female,96
+2016,School of Design,Full-Time,Diploma in Retail & Hospitality Design,Male,37
+2016,School of Design,Full-Time,Diploma in Visual Communication,Female,3
+2016,School of Design,Full-Time,Diploma in Visual Communication,Male,5
+2016,School of Engineering,Full-Time,Common Engineering Programme,Female,36
+2016,School of Engineering,Full-Time,Common Engineering Programme,Male,161
+2016,School of Engineering,Full-Time,Diploma in 3D Interactive Media Technology,Female,54
+2016,School of Engineering,Full-Time,Diploma in 3D Interactive Media Technology,Male,90
+2016,School of Engineering,Full-Time,Diploma in Aerospace Electronics,Female,57
+2016,School of Engineering,Full-Time,Diploma in Aerospace Electronics,Male,326
+2016,School of Engineering,Full-Time,Diploma in Aerospace Engineering,Female,39
+2016,School of Engineering,Full-Time,Diploma in Aerospace Engineering,Male,355
+2016,School of Engineering,Full-Time,Diploma in Aviation Management & Services,Female,153
+2016,School of Engineering,Full-Time,Diploma in Aviation Management & Services,Male,341
+2016,School of Engineering,Full-Time,Diploma in Biomedical Engineering,Female,104
+2016,School of Engineering,Full-Time,Diploma in Biomedical Engineering,Male,129
+2016,School of Engineering,Full-Time,Diploma in Biomedical Informatics & Engineering,Male,2
+2016,School of Engineering,Full-Time,Diploma in Business Process & Systems Engineering,Female,215
+2016,School of Engineering,Full-Time,Diploma in Business Process & Systems Engineering,Male,269
+2016,School of Engineering,Full-Time,Diploma in Clean Energy,Female,57
+2016,School of Engineering,Full-Time,Diploma in Clean Energy,Male,155
+2016,School of Engineering,Full-Time,Diploma in Computer Engineering,Female,21
+2016,School of Engineering,Full-Time,Diploma in Computer Engineering,Male,158
+2016,School of Engineering,Full-Time,Diploma in Electronics,Female,71
+2016,School of Engineering,Full-Time,Diploma in Electronics,Male,290
+2016,School of Engineering,Full-Time,Diploma in Green Building & Sustainability,Female,147
+2016,School of Engineering,Full-Time,Diploma in Green Building & Sustainability,Male,176
+2016,School of Engineering,Full-Time,Diploma in Infocomm & Network Engineering,Female,51
+2016,School of Engineering,Full-Time,Diploma in Infocomm & Network Engineering,Male,187
+2016,School of Engineering,Full-Time,Diploma in Integrated Facility Management,Female,232
+2016,School of Engineering,Full-Time,Diploma in Integrated Facility Management,Male,127
+2016,School of Engineering,Full-Time,Diploma in Mechatronics,Female,65
+2016,School of Engineering,Full-Time,Diploma in Mechatronics,Male,440
+2016,School of Engineering,Full-Time,Diploma in Media & Communication Technology,Female,33
+2016,School of Engineering,Full-Time,Diploma in Media & Communication Technology,Male,47
+2016,School of Engineering,Full-Time,Diploma in Microelectronics,Female,8
+2016,School of Engineering,Full-Time,Diploma in Microelectronics,Male,36
+2016,School of Engineering,Full-Time,Electrical & Electronic Engineering Programme,Female,27
+2016,School of Engineering,Full-Time,Electrical & Electronic Engineering Programme,Male,117
+2016,School of Engineering,Full-Time,Mechatronics/Aerospace Engineering,Female,13
+2016,School of Engineering,Full-Time,Mechatronics/Aerospace Engineering,Male,152
+2016,School of Humanities & Social Sciences,Full-Time,Diploma in Early Childhood Studies,Female,349
+2016,School of Humanities & Social Sciences,Full-Time,Diploma in Early Childhood Studies,Male,19
+2016,School of Humanities & Social Sciences,Full-Time,Diploma in Gerontological Management Studies,Female,131
+2016,School of Humanities & Social Sciences,Full-Time,Diploma in Gerontological Management Studies,Male,45
+2016,School of Humanities & Social Sciences,Full-Time,Diploma in Psychology Studies,Female,141
+2016,School of Humanities & Social Sciences,Full-Time,Diploma in Psychology Studies,Male,59
+2016,School of Informatics & IT,Full-Time,Diploma in Big Data Management & Governance,Female,29
+2016,School of Informatics & IT,Full-Time,Diploma in Big Data Management & Governance,Male,54
+2016,School of Informatics & IT,Full-Time,Diploma in Business Intelligence & Analytics,Female,56
+2016,School of Informatics & IT,Full-Time,Diploma in Business Intelligence & Analytics,Male,82
+2016,School of Informatics & IT,Full-Time,Diploma in Cyber & Digital Security,Female,28
+2016,School of Informatics & IT,Full-Time,Diploma in Cyber & Digital Security,Male,123
+2016,School of Informatics & IT,Full-Time,Diploma in Digital Forensics,Female,64
+2016,School of Informatics & IT,Full-Time,Diploma in Digital Forensics,Male,85
+2016,School of Informatics & IT,Full-Time,Diploma in Financial Business Informatics,Female,82
+2016,School of Informatics & IT,Full-Time,Diploma in Financial Business Informatics,Male,106
+2016,School of Informatics & IT,Full-Time,Diploma in Game Design & Development,Female,13
+2016,School of Informatics & IT,Full-Time,Diploma in Game Design & Development,Male,177
+2016,School of Informatics & IT,Full-Time,Diploma in Information Technology,Female,65
+2016,School of Informatics & IT,Full-Time,Diploma in Information Technology,Male,184
+2016,School of Informatics & IT,Full-Time,Diploma in Mobile & Network Services,Female,58
+2016,School of Informatics & IT,Full-Time,Diploma in Mobile & Network Services,Male,111
+2017,School of Applied Science,Full-Time,Diploma in Applied Food Science & Nutrition,Female,202
+2017,School of Applied Science,Full-Time,Diploma in Applied Food Science & Nutrition,Male,52
+2017,School of Applied Science,Full-Time,Diploma in Baking & Culinary Science,Female,60
+2017,School of Applied Science,Full-Time,Diploma in Baking & Culinary Science,Male,60
+2017,School of Applied Science,Full-Time,Diploma in Biomedical Science,Female,100
+2017,School of Applied Science,Full-Time,Diploma in Biomedical Science,Male,50
+2017,School of Applied Science,Full-Time,Diploma in Biotechnology,Female,151
+2017,School of Applied Science,Full-Time,Diploma in Biotechnology,Male,110
+2017,School of Applied Science,Full-Time,Diploma in Chemical Engineering,Female,149
+2017,School of Applied Science,Full-Time,Diploma in Chemical Engineering,Male,289
+2017,School of Applied Science,Full-Time,Diploma in Pharmaceutical Science,Female,195
+2017,School of Applied Science,Full-Time,Diploma in Pharmaceutical Science,Male,97
+2017,School of Applied Science,Full-Time,Diploma in Veterinary Technology,Female,109
+2017,School of Applied Science,Full-Time,Diploma in Veterinary Technology,Male,43
+2017,School of Business,Full-Time,Business/Logistics & Operations Management/Marketing,Female,271
+2017,School of Business,Full-Time,Business/Logistics & Operations Management/Marketing,Male,205
+2017,School of Business,Full-Time,Diploma in Accounting & Finance,Female,212
+2017,School of Business,Full-Time,Diploma in Accounting & Finance,Male,240
+2017,School of Business,Full-Time,Diploma in Business,Female,342
+2017,School of Business,Full-Time,Diploma in Business,Male,226
+2017,School of Business,Full-Time,Diploma in Business Information Technology,Female,173
+2017,School of Business,Full-Time,Diploma in Business Information Technology,Male,202
+2017,School of Business,Full-Time,Diploma in Communications & Media Management,Female,178
+2017,School of Business,Full-Time,Diploma in Communications & Media Management,Male,72
+2017,School of Business,Full-Time,Diploma in Culinary & Catering Management,Female,73
+2017,School of Business,Full-Time,Diploma in Culinary & Catering Management,Male,82
+2017,School of Business,Full-Time,Diploma in Hospitality & Tourism Management,Female,434
+2017,School of Business,Full-Time,Diploma in Hospitality & Tourism Management,Male,177
+2017,School of Business,Full-Time,Diploma in Law & Management,Female,208
+2017,School of Business,Full-Time,Diploma in Law & Management,Male,122
+2017,School of Business,Full-Time,Diploma in Leisure & Events Management,Female,336
+2017,School of Business,Full-Time,Diploma in Leisure & Events Management,Male,126
+2017,School of Business,Full-Time,Diploma in Leisure & Resort Management,Female,7
+2017,School of Business,Full-Time,Diploma in Leisure & Resort Management,Male,4
+2017,School of Business,Full-Time,Diploma in Logistics & Operations Management,Female,106
+2017,School of Business,Full-Time,Diploma in Logistics & Operations Management,Male,103
+2017,School of Business,Full-Time,Diploma in Marketing,Female,103
+2017,School of Business,Full-Time,Diploma in Marketing,Male,77
+2017,School of Business,Full-Time,Diploma in Retail Management,Female,174
+2017,School of Business,Full-Time,Diploma in Retail Management,Male,74
+2017,School of Design,Full-Time,Diploma in Apparel Design & Merchandising,Female,155
+2017,School of Design,Full-Time,Diploma in Apparel Design & Merchandising,Male,22
+2017,School of Design,Full-Time,Diploma in Communication Design,Female,277
+2017,School of Design,Full-Time,Diploma in Communication Design,Male,61
+2017,School of Design,Full-Time,Diploma in Digital Film & Television,Female,119
+2017,School of Design,Full-Time,Diploma in Digital Film & Television,Male,103
+2017,School of Design,Full-Time,Diploma in Environment Design,Female,91
+2017,School of Design,Full-Time,Diploma in Environment Design,Male,50
+2017,School of Design,Full-Time,Diploma in Interior Architecture & Design,Female,126
+2017,School of Design,Full-Time,Diploma in Interior Architecture & Design,Male,88
+2017,School of Design,Full-Time,Diploma in Product & Industrial Design,Female,67
+2017,School of Design,Full-Time,Diploma in Product & Industrial Design,Male,68
+2017,School of Design,Full-Time,Diploma in Retail & Hospitality Design,Female,61
+2017,School of Design,Full-Time,Diploma in Retail & Hospitality Design,Male,26
+2017,School of Design,Full-Time,Diploma in Visual Communication,Female,1
+2017,School of Engineering,Full-Time,Common Engineering Programme,Female,52
+2017,School of Engineering,Full-Time,Common Engineering Programme,Male,223
+2017,School of Engineering,Full-Time,Diploma in 3D Interactive Media Technology,Female,47
+2017,School of Engineering,Full-Time,Diploma in 3D Interactive Media Technology,Male,95
+2017,School of Engineering,Full-Time,Diploma in Aerospace Electronics,Female,56
+2017,School of Engineering,Full-Time,Diploma in Aerospace Electronics,Male,320
+2017,School of Engineering,Full-Time,Diploma in Aerospace Engineering,Female,35
+2017,School of Engineering,Full-Time,Diploma in Aerospace Engineering,Male,345
+2017,School of Engineering,Full-Time,Diploma in Aviation Management & Services,Female,159
+2017,School of Engineering,Full-Time,Diploma in Aviation Management & Services,Male,324
+2017,School of Engineering,Full-Time,Diploma in Biomedical Engineering,Female,115
+2017,School of Engineering,Full-Time,Diploma in Biomedical Engineering,Male,131
+2017,School of Engineering,Full-Time,Diploma in Business Process & Systems Engineering,Female,215
+2017,School of Engineering,Full-Time,Diploma in Business Process & Systems Engineering,Male,248
+2017,School of Engineering,Full-Time,Diploma in Clean Energy,Female,46
+2017,School of Engineering,Full-Time,Diploma in Clean Energy,Male,144
+2017,School of Engineering,Full-Time,Diploma in Computer Engineering,Female,27
+2017,School of Engineering,Full-Time,Diploma in Computer Engineering,Male,176
+2017,School of Engineering,Full-Time,Diploma in Electronics,Female,42
+2017,School of Engineering,Full-Time,Diploma in Electronics,Male,239
+2017,School of Engineering,Full-Time,Diploma in Electronics,Female,6
+2017,School of Engineering,Full-Time,Diploma in Electronics,Male,14
+2017,School of Engineering,Full-Time,Diploma in Green Building & Sustainability,Female,116
+2017,School of Engineering,Full-Time,Diploma in Green Building & Sustainability,Male,191
+2017,School of Engineering,Full-Time,Diploma in Infocomm & Network Engineering,Female,21
+2017,School of Engineering,Full-Time,Diploma in Infocomm & Network Engineering,Male,115
+2017,School of Engineering,Full-Time,Diploma in Integrated Facility Management,Female,204
+2017,School of Engineering,Full-Time,Diploma in Integrated Facility Management,Male,109
+2017,School of Engineering,Full-Time,Diploma in Mechatronics,Female,56
+2017,School of Engineering,Full-Time,Diploma in Mechatronics,Male,424
+2017,School of Engineering,Full-Time,Diploma in Media & Communication Technology,Female,14
+2017,School of Engineering,Full-Time,Diploma in Media & Communication Technology,Male,19
+2017,School of Engineering,Full-Time,Diploma in Microelectronics,Female,13
+2017,School of Engineering,Full-Time,Diploma in Microelectronics,Male,55
+2017,School of Engineering,Full-Time,Electrical & Electronic Engineering Programme,Female,22
+2017,School of Engineering,Full-Time,Electrical & Electronic Engineering Programme,Male,153
+2017,School of Engineering,Full-Time,Mechatronics/Aerospace Engineering,Female,8
+2017,School of Engineering,Full-Time,Mechatronics/Aerospace Engineering,Male,192
+2017,School of Humanities & Social Sciences,Full-Time,Diploma in Early Childhood Studies,Female,454
+2017,School of Humanities & Social Sciences,Full-Time,Diploma in Early Childhood Studies,Male,25
+2017,School of Humanities & Social Sciences,Full-Time,Diploma in Gerontological Management Studies,Female,108
+2017,School of Humanities & Social Sciences,Full-Time,Diploma in Gerontological Management Studies,Male,49
+2017,School of Humanities & Social Sciences,Full-Time,Diploma in Psychology Studies,Female,137
+2017,School of Humanities & Social Sciences,Full-Time,Diploma in Psychology Studies,Male,56
+2017,School of Informatics & IT,Full-Time,Diploma in Big Data Management & Governance,Female,37
+2017,School of Informatics & IT,Full-Time,Diploma in Big Data Management & Governance,Male,67
+2017,School of Informatics & IT,Full-Time,Diploma in Business Intelligence & Analytics,Female,52
+2017,School of Informatics & IT,Full-Time,Diploma in Business Intelligence & Analytics,Male,87
+2017,School of Informatics & IT,Full-Time,Diploma in Cyber & Digital Security,Female,21
+2017,School of Informatics & IT,Full-Time,Diploma in Cyber & Digital Security,Male,126
+2017,School of Informatics & IT,Full-Time,Diploma in Digital Forensics,Female,69
+2017,School of Informatics & IT,Full-Time,Diploma in Digital Forensics,Male,79
+2017,School of Informatics & IT,Full-Time,Diploma in Financial Business Informatics,Female,79
+2017,School of Informatics & IT,Full-Time,Diploma in Financial Business Informatics,Male,101
+2017,School of Informatics & IT,Full-Time,Diploma in Game Design & Development,Female,20
+2017,School of Informatics & IT,Full-Time,Diploma in Game Design & Development,Male,195
+2017,School of Informatics & IT,Full-Time,Diploma in Information Technology,Female,53
+2017,School of Informatics & IT,Full-Time,Diploma in Information Technology,Male,223
+2017,School of Informatics & IT,Full-Time,Diploma in Mobile & Network Services,Female,38
+2017,School of Informatics & IT,Full-Time,Diploma in Mobile & Network Services,Male,83

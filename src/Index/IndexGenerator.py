@@ -1,3 +1,6 @@
+from src.Index.tokenize import tokenize_cell
+
+
 def calculate_xash(token: str, hash_size: int = 128) -> int:
     """Calculates the XASH hash of a token."""
 
@@ -166,9 +169,10 @@ def map_chunks(con: vp.Connection,
 
 from Chunks import GitChunk, DresdenChunk
 import configparser
+from src import paths
 def main():
     config = configparser.ConfigParser()
-    config.read('config/config.ini')
+    config.read(str(paths.config_path()))
     vertica_con = pg.connect(
                 host=config['Database']['host'],
                 port=5432,
@@ -201,9 +205,7 @@ def df_to_index(df: pd.DataFrame) -> pd.DataFrame:
         if is_numeric_col:
             mean = df.iloc[:, col_counter].mean()
         for row_counter in range(number_of_rows):
-            tokenized = str(file_content[row_counter][col_counter]).lower().replace('\\', '').replace('\'', '').replace('\"', '').replace('\t', '').replace('\n', '').replace('\r', '').strip()[:200]
-            if tokenized == 'nan' or tokenized == 'none':
-                tokenized = ''
+            tokenized = tokenize_cell(file_content[row_counter][col_counter])
             quadrant = file_content[row_counter][col_counter] >= mean if is_numeric_col else None
             new_data.append((tokenized, tableid, col_counter, row_counter, quadrant))
             superkeys[row_counter] = superkeys[row_counter] | calculate_xash(str(tokenized))

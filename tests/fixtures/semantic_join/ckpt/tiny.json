@@ -1,0 +1,10 @@
+{
+  "n_proxy_sets": 4,
+  "n_elements": 2,
+  "d": 4,
+  "cell_char_cap": 64,
+  "row_cap": 8,
+  "row_cap_seed": 0,
+  "train_dataset": "fixture",
+  "eval_chunk_size": 4
+}

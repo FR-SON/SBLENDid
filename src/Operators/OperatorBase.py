@@ -6,6 +6,7 @@ from typing import List
 
 
 class Operator(ABC):
+    is_approximate: bool = False
     DB = DBHandler()
     def __init__(self, k):
         self.k = k

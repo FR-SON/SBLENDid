@@ -1,0 +1,41 @@
+services:
+  blend:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: ${IMAGE_NAME:-blend:v0.1}
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+    working_dir: /app
+    environment:
+      BLEND_CONFIG: /config/config.ini
+      BLEND_DATASETS_DIR: /data/datasets
+      BLEND_RUNS_DIR: /data/runs
+      BLEND_DUCKDB_THREADS: ${BLEND_DUCKDB_THREADS:-}
+      BLEND_DUCKDB_MEMORY_LIMIT: ${BLEND_DUCKDB_MEMORY_LIMIT:-}
+      BLEND_USE_ML_OPTIMIZER: ${BLEND_USE_ML_OPTIMIZER:-0}
+      BLEND_PG_MAINTENANCE_WORK_MEM: ${BLEND_PG_MAINTENANCE_WORK_MEM:-}
+      BLEND_PG_MAX_PARALLEL_MAINTENANCE_WORKERS: ${BLEND_PG_MAX_PARALLEL_MAINTENANCE_WORKERS:-}
+      BLEND_SNOOPY_FASTTEXT_PATH: /models/cc.en.300.bin
+      BLEND_DEEPJOIN_NLTK_PATH: /models/nltk_data
+      # Arbitrary host UIDs have no passwd entry; getpass.getuser() needs USER/LOGNAME.
+      USER: blend
+      LOGNAME: blend
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ${DATASETS_DIR:?set DATASETS_DIR}:/data/datasets
+      - ${RUNS_DIR:?set RUNS_DIR}:/data/runs
+      - ${CONFIG_FILE:?set CONFIG_FILE}:/config/config.ini:ro
+      - ${FASTTEXT_BIN:?set FASTTEXT_BIN}:/models/cc.en.300.bin:ro
+      - ${NLTK_DATA_DIR:?set NLTK_DATA_DIR}:/models/nltk_data:ro
+    shm_size: "4gb"
+    cpus: "${BLEND_CPUS:-0}"          # 0 = no cap
+    # Keep BLEND_DUCKDB_MEMORY_LIMIT below this: faiss/torch allocate outside DuckDB's cap.
+    mem_limit: "${BLEND_MEM_LIMIT:-150g}"
+    memswap_limit: "${BLEND_MEM_LIMIT:-150g}"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: [gpu]

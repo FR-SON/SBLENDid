@@ -1,6 +1,7 @@
 from src.Operators.Seekers.SeekerBase import Seeker
 import numpy as np
 import pandas as pd
+from src.cost_model import resolve_cost
 
 # Typing imports
 from src.DBHandler import DBHandler
@@ -18,6 +19,7 @@ class Correlation(Seeker):
         self.input_target = grouped['target'].values
         self.hash_size = 256
 
+        # ::float: Postgres int/int truncates, DuckDB/Vertica don't.
         self.base_sql = f"""
         SELECT TableId
         FROM (
@@ -29,7 +31,7 @@ class Correlation(Seeker):
                         categorical.TableId,
                         categorical.ColumnId catcol,
                         numerical.ColumnId numcol,
-                        sum(numerical.Quadrant::int) / count(*) > 0.5 as Quadrant,
+                        sum(numerical.Quadrant::int)::float / count(*) > 0.5 as Quadrant,
                         count(distinct numerical.CellValue) as num_unique,
                         min(numerical.CellValue) as any_cellvalue
                     FROM (SELECT * FROM AllTables WHERE rowid < {self.hash_size} AND (CellValue IN ($FALSETOKENS$)
@@ -65,7 +67,7 @@ class Correlation(Seeker):
         return sql
 
     def cost(self) -> int:
-        return 6
+        return resolve_cost("C", 6, db=self.DB)
     
     def ml_cost(self, db: DBHandler) -> float:
         return self._predict_runtime([[token for token in self.input_source]], db)

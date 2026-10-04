@@ -1,4 +1,5 @@
 from src.Operators.Seekers.SeekerBase import Seeker
+from src.cost_model import resolve_cost
 
 # Typing imports
 from src.DBHandler import DBHandler
@@ -25,7 +26,7 @@ class Keyword(Seeker):
         return sql
 
     def cost(self) -> int:
-        return 3
+        return resolve_cost("KW", 3, db=self.DB)
     
     def ml_cost(self, db: DBHandler) -> float:
         return self._predict_runtime([list(self.input)], db)

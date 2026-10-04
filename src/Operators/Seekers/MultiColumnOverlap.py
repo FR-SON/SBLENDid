@@ -3,6 +3,8 @@ import numpy as np
 from collections import defaultdict
 from heapq import heapify, heappush, heappop
 from src.utils import calculate_xash
+from src.Index.tokenize import tokenize_cell
+from src.cost_model import resolve_cost
 
 # Typing imports
 from src.DBHandler import DBHandler
@@ -13,7 +15,8 @@ from typing import List
 class MultiColumnOverlap(Seeker):
     def __init__(self, input_df: pd.DataFrame, k: int = 10) -> None:
         super().__init__(k)
-        self.input = input_df.copy().astype(str)
+        # The index stores tokenize_cell'd cells, so raw input would never match.
+        self.input = input_df.copy().astype(str).map(tokenize_cell)
         self.base_sql = """
             SELECT firstcolumn.TableId, firstcolumn.RowId, firstcolumn.superkey, firstcolumn.CellValue,
                     firstcolumn.ColumnId $OTHER_SELECT_COLUMNS$
@@ -66,7 +69,7 @@ class MultiColumnOverlap(Seeker):
 
     
     def cost(self) -> int:
-        return 10
+        return resolve_cost("MC", 10, db=self.DB)
     
     def ml_cost(self, db: DBHandler) -> float:
         return self._predict_runtime([list(col) for col in self.input.values.T], db)
@@ -74,17 +77,13 @@ class MultiColumnOverlap(Seeker):
     def run_filter(self, PLs: List, db: DBHandler) -> List[int]:
         # - Preprocessing
         PL_dictionary = defaultdict(list)
-        PL_candidate_structure = {}
         for tablerow_superkey in PLs:
             table = tablerow_superkey[0]
             row = tablerow_superkey[1]
             superkey = tablerow_superkey[2]
             token = tablerow_superkey[3]
             colid = tablerow_superkey[4]
-            tokens = [tablerow_superkey[x] for x in np.arange(5, len(tablerow_superkey), 2)]
-            cols = [tablerow_superkey[x] for x in np.arange(6, len(tablerow_superkey), 2)]
             PL_dictionary[table].append((row, superkey, token, colid))
-            PL_candidate_structure[(table, row)] = [tokens, cols]
 
         top_joinable_tables = []  # each item includes: Tableid, joinable_rows
         
@@ -97,7 +96,8 @@ class MultiColumnOverlap(Seeker):
         g = input_cpy.groupby([input_cpy.columns.values[0]])
         gd = defaultdict(list)
         for key, item in g:
-            gd[str(key[0])] = g.get_group(key[0]).values
+            token_key = str(key[0]) if isinstance(key, tuple) else str(key)
+            gd[token_key] = item.values
 
         candidate_external_row_ids = []
         candidate_external_col_ids = []
@@ -128,7 +128,12 @@ class MultiColumnOverlap(Seeker):
                         top_joinable_tables[0][0]):
                     break
                 rowid = hit[0]
-                superkey = int(hit[1], 2)
+                # Vertica returns a bit-string, Postgres/DuckDB a "0x..." hex string.
+                raw = hit[1]
+                if isinstance(raw, str) and raw.lower().startswith('0x'):
+                    superkey = int(raw, 16)
+                else:
+                    superkey = int(raw, 2)
                 token = hit[2]
                 colid = hit[3]
                 relevant_input_rows = gd[token]

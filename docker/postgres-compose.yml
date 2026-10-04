@@ -1,0 +1,52 @@
+# Postgres/pgvector backend; the blend container reaches it over an external network.
+# One-time: docker network create ${BLEND_NET:-blend-net}
+name: blend-db
+services:
+  postgres:
+    image: timescale/timescaledb-ha:pg17
+    container_name: ${PG_CONTAINER:-blend-pg}
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"   # must own the bind-mounted pgdata
+    environment:
+      POSTGRES_USER: blend
+      POSTGRES_PASSWORD: blend
+      POSTGRES_DB: blend
+    ports:
+      # Host-side access only; the blend container uses the network name on 5432.
+      - "127.0.0.1:55432:5432"
+    volumes:
+      # Bind source must pre-exist, owned by HOST_UID. Target is timescaledb-ha's PGDATA.
+      - ${PG_DATA_DIR:-./pg-data}:/home/postgres/pgdata/data
+      - ./pg-init:/docker-entrypoint-initdb.d:ro
+    shm_size: "${PG_SHM_SIZE:-64g}"   # must exceed BLEND_PG_MAINTENANCE_WORK_MEM
+    cpus: "${PG_CPUS:-0}"             # 0 = no cap
+    networks:
+      - blend-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U blend -d blend"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    command:
+      - postgres
+      - -c
+      - jit=off
+      # Parallelism matched to DuckDB threads; max_worker_processes caps the pool.
+      - -c
+      - max_parallel_workers_per_gather=${PG_MAX_PARALLEL_WORKERS_PER_GATHER:-16}
+      - -c
+      - max_parallel_workers=${PG_MAX_PARALLEL_WORKERS:-16}
+      - -c
+      - max_worker_processes=${PG_MAX_WORKER_PROCESSES:-16}
+      - -c
+      - work_mem=${PG_WORK_MEM:-2GB}
+      - -c
+      - hash_mem_multiplier=${PG_HASH_MEM_MULTIPLIER:-2.0}
+      - -c
+      - effective_cache_size=${PG_EFFECTIVE_CACHE_SIZE:-256GB}
+      # Must hold the whole semantic_columns family (heap + hnsw + pkey); check with ann-frontier --io-stats.
+      - -c
+      - shared_buffers=${PG_SHARED_BUFFERS:-2GB}
+networks:
+  blend-net:
+    external: true
+    name: ${BLEND_NET:-blend-net}
